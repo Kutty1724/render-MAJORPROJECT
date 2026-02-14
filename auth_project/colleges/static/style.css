@@ -1,0 +1,440 @@
+/* 🌌 GLOBAL */
+body{
+margin:0;
+font-family:Segoe UI, sans-serif;
+background:linear-gradient(135deg,#020617,#020b30);
+color:white;
+overflow-x:hidden;
+}
+
+/* 🔥 NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#7dd3fc;
+}
+
+.navbar a{
+margin-left:15px;
+color:#f3f2f7;
+text-decoration:none;
+}
+
+/* 🔎 SEARCH BAR */
+.search{
+padding:10px 20px;
+border-radius:20px;
+border:none;
+width:300px;
+background:rgba(255,255,255,0.05);
+color:white;
+outline:none;
+}
+
+/* 🧠 FILTER BUTTONS */
+.filters{
+padding:20px 40px;
+}
+
+.filters button{
+margin-right:10px;
+padding:8px 14px;
+border:none;
+border-radius:8px;
+background:#e5e7eb;
+cursor:pointer;
+}
+
+/* ⭐ CARDS GRID (FIXED ALIGNMENT) */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
+padding:80px 40px;
+max-width:1300px;
+margin:0 auto;
+align-items:start;   /* 🔥 Prevent diagonal floating */
+}
+
+/* 💎 CARD STYLE */
+.card{
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    padding:25px;
+    width:320px;
+    transition:0.35s ease;
+    box-shadow:0 0 40px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+    transform:scale(1.05) translateY(-10px);
+    box-shadow:0 0 60px rgba(14,165,233,0.4);
+}
+
+
+.card h2{
+color:#93c5fd;
+margin-top:0;
+}
+
+.card p{
+opacity:0.8;
+margin:8px 0;
+}
+
+/* ❤️ SAVE BUTTON */
+.card a{
+color:#f5f7f7;
+text-decoration:none;
+font-weight:500;
+}
+
+.ai-copilot{
+    position:fixed;
+    right:30px;
+    bottom:40px;
+    width:260px;
+    padding:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border-radius:18px;
+    box-shadow:0 0 40px rgba(14,165,233,0.2);
+}
+
+.ai-copilot input{
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    border:none;
+    margin-bottom:10px;
+    background:#0f172a;
+    color:white;
+}
+
+.ai-copilot button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#0ea5e9,#a855f7);
+    color:white;
+    cursor:pointer;
+}
+
+/* ===== COLLEGE DETAIL PAGE ===== */
+
+.detail-wrapper{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.detail-card{
+    width:80%;
+    max-width:1100px;
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 0 40px rgba(0,0,0,0.4);
+}
+
+.detail-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.detail-meta{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:30px;
+    opacity:0.8;
+}
+
+.detail-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.info-box{
+    background:rgba(255,255,255,0.03);
+    padding:20px;
+    border-radius:14px;
+}
+
+.package-box{
+    margin-top:30px;
+    text-align:center;
+    font-size:18px;
+}
+/* ======================
+   🔐 LOGIN PAGE CENTER
+====================== */
+
+.login-body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#020617,#0ea5e9);
+}
+
+.login-box{
+    width:380px;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    text-align:center;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+.login-box input{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    background:#0f172a;
+    color:white;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    background:linear-gradient(90deg,#bec2c4,#f5f5f6);
+    color:white;
+    cursor:pointer;
+}
+.landing-body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#334155,#60a5fa);
+}
+/* =========================
+   🌌 GALAXY BACKGROUND
+========================= */
+
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:#020617;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+      radial-gradient(white 1px, transparent 1px),
+      radial-gradient(#0ea5e9 1px, transparent 1px);
+    background-size:80px 80px,120px 120px;
+    opacity:0.15;
+    animation:starsMove 60s linear infinite;
+    z-index:-1;
+}
+
+@keyframes starsMove{
+    from{transform:translateY(0);}
+    to{transform:translateY(-200px);}
+}
+.cosmic-container{
+    animation:pageEnter 0.6s ease;
+}
+
+@keyframes pageEnter{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* ======================
+   🔐 LOGIN PAGE CENTER
+====================== */
+
+.login-body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#020617,#0ea5e9);
+}
+
+.login-box{
+    width:380px;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    text-align:center;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+.login-box input{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    background:#0f172a;
+    color:white;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    background:linear-gradient(90deg,#0ea5e9,#a855f7);
+    color:white;
+    cursor:pointer;
+}
+.landing-body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#334155,#60a5fa);
+}
+
+.hero{
+    text-align:center;
+    color:white;
+}
+
+.enter-btn{
+    padding:14px 28px;
+    border:none;
+    border-radius:12px;
+    margin-top:20px;
+    font-size:16px;
+    background:#7dd3fc;
+    cursor:pointer;
+}
+/* ===========================
+   🌌 IMAGE HOVER REVEAL CARDS
+=========================== */
+
+.card{
+    position:relative;
+    height:220px;
+    overflow:hidden;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* 🌆 IMAGE */
+.card-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s ease;
+    filter:brightness(0.7);
+}
+
+/* 🌠 HOVER OVERLAY */
+.card-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,transparent,#020617);
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.4s ease;
+    text-align:center;
+}
+
+/* ✨ HOVER EFFECT */
+.card:hover .card-overlay{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover .card-img{
+    transform:scale(1.1);
+    filter:brightness(0.4);
+}
+/* ============================
+   🌌 IMAGE CARD COSMIC MODE
+============================ */
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    height:260px;
+    cursor:pointer;
+}
+
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s ease;
+}
+
+/* DARK GLASS OVERLAY */
+.card-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:25px;
+    background:linear-gradient(
+        to top,
+        rgba(2,6,23,0.95),
+        rgba(2,6,23,0.3)
+    );
+
+    opacity:0;
+    transform:translateY(30px);
+    transition:0.4s ease;
+}
+
+.card:hover .card-overlay{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}

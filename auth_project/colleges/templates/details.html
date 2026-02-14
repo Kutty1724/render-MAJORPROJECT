@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{college.name}}</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo">CollegeVerse 🇮🇳</div>
+<a href="/" style="color:#38bdf8;">⬅ Back</a>
+</div>
+
+<div class="container">
+
+<div class="card" style="grid-column:span 3;">
+<h1>{{college.name}}</h1>
+
+<img src="{{college.image.url}}" width="100%">
+
+<div class="section">
+📍 Location: {{college.location}}
+</div>
+
+<div class="section">
+🎓 Courses: {{college.courses}}
+</div>
+
+<div class="section">
+🧪 Labs: {{college.labs}}
+</div>
+
+<div class="section">
+🚀 Clubs: {{college.clubs}}
+</div>
+
+<div class="section">
+🎭 Culturals: {{college.culturals}}
+</div>
+
+<div class="section">
+🏢 Placements: {{college.placements}}
+</div>
+
+<div class="section">
+💼 Companies: {{college.top_companies}}
+</div>
+
+<div class="section">
+💰 Highest Package: {{college.highest_package}}
+</div>
+
+<div class="section">
+📊 Average Package: {{college.average_package}}
+</div>
+
+<div class="section">
+🎯 GATE Students: {{college.gate_students}}
+</div>
+
+
+</div>
+
+</body>
+</html>

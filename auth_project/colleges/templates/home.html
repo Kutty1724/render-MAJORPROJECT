@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>CollegeVerse</title>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<script src="{% static 'script.js' %}"></script>
+</head>
+
+<body>
+
+<!-- 🔥 NAVBAR -->
+<div class="navbar">
+
+<div class="logo">CollegeVerse 🇮🇳</div>
+
+<input list="suggestions"
+id="searchInput"
+class="search"
+placeholder="Search IIT, NIT, IIIT..."
+onkeyup="searchCollege()">
+
+<datalist id="suggestions">
+{% for college in colleges %}
+<option value="{{college.name}}">
+{% endfor %}
+</datalist>
+
+<div>
+<a href="/login/">Login</a>
+<a href="/logout/">Logout</a>
+</div>
+
+</div>
+
+<!-- ⭐ FILTER BUTTONS -->
+<div class="filters">
+<button onclick="filterType('IIT')">IIT</button>
+<button onclick="filterType('NIT')">NIT</button>
+<button onclick="filterType('IIIT')">IIIT</button>
+<button onclick="filterType('')">All</button>
+</div>
+
+
+<!-- ⭐ CARDS GRID -->
+<div class="cards">
+
+{% for college in colleges %}
+
+<a href="{% url 'college_detail' college.id %}">
+
+<div class="card">
+
+<!-- 🏞 BACKGROUND IMAGE -->
+<div class="card-image">
+
+{% if "Hyderabad" in college.name %}
+<img src="https://tourism.telangana.gov.in/storage/app/media/charminar-landscape.jpg">
+
+{% elif "Delhi" in college.name %}
+<img src="https://media4.thrillophilia.com/images/photos/000/044/480/original/1524478881_shutterstock_418380280.jpg">
+
+{% elif "Bombay" in college.name %}i_03
+<img src="https://static.toiimg.com/thumb/msid-53891735,width-748,height-499,resizemode%3D4,imgsize-126102/.jpg">
+
+{% elif "Warangal" in college.name %}
+<img src="https://www.trawell.in/admin/images/upload/249844209Warangal_Main.jpg">
+
+{% elif "Surathkal" in college.name %}
+<img src="https://image-static.collegedunia.com/public/college_data/images/campusimage/1767357278Campus%209.jpeg">
+
+{% elif "Trichy" in college.name %}
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--B9fFJVPwcryNlXUj19YWX1hIoNh2Ts--g&s">
+
+{% elif "Bangalore" in college.name %}
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPlYYhHMkZC4lVG0zeRyltM4hj0Pny5KPve57l9CEa9g&s">
+
+{% elif "JNTUH" in college.name %}
+<img src="https://th.bing.com/th/id/OIP.XljmsHixeys4F3wYdLXEHwHaCa?w=299&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3">
+
+{% elif "Osmania" in college.name %}
+<img src="https://www.bing.com/th/id/OIP.d_M_kF_Xi2MCXtX-QDjUAwHaD2?w=309&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2">
+
+{% elif "VIT" in college.name %}
+<img src="https://www.bing.com/th/id/OIP.72LN14E2M6bnupqvwEGH0AHaEA?w=245&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2">
+
+{% elif "SRM" in college.name %}
+<img src="https://www.bing.com/th/id/OIP.zze_iIn9c4wtlSynspehZQHaDt?w=293&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2">
+
+{% elif "BITS" in college.name %}
+<img src="https://www.bing.com/th/id/OIP.W9EnT1LTq5OMe0rWM4bOSgHaFj?w=239&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2">
+
+{% elif "Anna" in college.name %}
+<img src="https://www.bing.com/th/id/OIP.Q_6sIF7FKmWnJgjjbRYlowHaEK?w=319&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2">
+
+{% elif "tkr" in college.name %}
+<img src="https://th.bing.com/th/id/OIP.C3lEqBDp7nxIWLJUaEHN_gHaFj?w=205&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3">
+
+{% elif "TEEGALA" in college.name %}
+<img src="https://th.bing.com/th/id/OIP.aM2acGg61AKavyfn6fx3FwHaE8?w=259&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3">
+
+{% elif "CBIT" in college.name %}
+<img src="https://th.bing.com/th/id/OIP.KVRSvQPAqOux4DwwVvF1wwHaE8?w=249&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3">
+
+{% else %}
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Marina_Beach_Chennai.jpg/800px-Marina_Beach_Chennai.jpg">
+{% endif %}
+
+</div>
+
+
+<!-- 💎 HOVER INFO -->
+<div class="card-overlay">
+<h2>{{college.name}}</h2>
+<p>📍 {{college.location}}</p>
+<p>💰 {{college.fees}}</p>
+<p>🎓 GATE Students: {{college.gate_students}}</p>
+<span>❤️ Save</span>
+</div>
+
+</div>
+</a>
+
+{% endfor %}
+
+</div>
+
+
+<!-- 🤖 AI COPILOT -->
+<div class="ai-copilot">
+<input placeholder="Ask about colleges..." id="aiInput">
+<button onclick="fakeAI()">Ask AI</button>
+<p id="aiReply"></p>
+</div>
+
+</body>
+</html>

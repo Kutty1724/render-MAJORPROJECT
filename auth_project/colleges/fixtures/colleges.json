@@ -1,0 +1,20 @@
+[
+{
+  "model": "colleges.college",
+  "pk": 1,
+  "fields": {
+    "name": "IIT Hyderabad",
+    "location": "Telangana",
+    "courses": "CSE, ECE, Mechanical, AI",
+    "labs": "AI Lab, Robotics Lab, VLSI Lab",
+    "clubs": "Robotics Club, Coding Club",
+    "culturals": "Elan Fest, Technical Symposium",
+    "placements": "Google, Microsoft, Amazon",
+    "top_companies": "Google, Nvidia, Qualcomm",
+    "highest_package": "90 LPA",
+    "average_package": "22 LPA",
+    "fees": "2.2L/year",
+    "gate_students": 120
+  }
+}
+]

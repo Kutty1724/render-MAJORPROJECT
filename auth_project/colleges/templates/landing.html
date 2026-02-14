@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>CollegeVerse</title>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<style>
+
+/* ===== PAGE RESET ===== */
+body{
+margin:0;
+font-family:Segoe UI, Arial;
+background:#020617;
+color:white;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#020617,#0ea5e9);
+}
+
+/* ===== TITLE ===== */
+.hero h1{
+font-size:70px;
+margin:0;
+letter-spacing:1px;
+}
+
+/* ===== SUBTEXT ===== */
+.hero p{
+opacity:0.8;
+margin-top:12px;
+font-size:18px;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+padding:16px 40px;
+margin-top:30px;
+border-radius:12px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+transition:0.3s;
+box-shadow:0 0 20px rgba(56,189,248,0.4);
+}
+
+.btn:hover{
+transform:scale(1.07);
+box-shadow:0 0 35px rgba(56,189,248,0.7);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- 🚀 COSMIC HERO LANDING -->
+<div class="hero">
+
+<h1>CollegeVerse 🇮🇳</h1>
+
+<p>Explore IIT • NIT • IIIT • Universities</p>
+
+<a href="/home/" class="btn">Enter Platform</a>
+
+</div>
+
+</body>
+</html>
